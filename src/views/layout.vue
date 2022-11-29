@@ -1,11 +1,21 @@
 <template>
   <div class="h5-wrapper">
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <nav class="tabbar">
+      <router-link to="/article">面经</router-link>
+      <router-link to="/collect">收藏</router-link>
+      <router-link to="/like">喜欢</router-link>
+      <router-link to="/user">我的</router-link>
+    </nav>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "LayoutPage",
+};
 </script>
 
 <style>
